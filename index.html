@@ -4,8 +4,205 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 </head>
 <body>
+    <div class="flex-all">
+        <aside class="flex-col noscroll">
+            <h1 class="no-margin"><span class="Med">Med</span><span Class="Space">Space</span></h1>
+            <hr class="no-margin">
+            <div class="admin-profile flex-row">
+                <svg class="profile-pic" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                <circle cx="40" cy="40" r="31" fill="#D9D9D9"/>
+                <circle cx="40" cy="40" r="37.5" stroke="#0177FC" stroke-width="5"/>
+                </svg>
+    
+                <div class="namadiv">
+                    <h2 class="nama">Hi, Admin!</h2>
+                </div>
+            </div>
+            <hr class="no-margin">
+    
+            <div class="no-margin bounding-box">
+                <div class = "active box no-margin">
+                    <a href=""><p class="no-margin link-active">Dashboard</p></a>
+                </div>
+    
+                <div class="no-margin bounding-box">
+                    <div class = "box no-margin">
+                        <a href=""><p class="no-margin link-nonactive">Room Availability</p></a>
+                    </div>
+                </div>
+            </div>
+    
+            <hr class="no-margin">
+    
+            <div class="no-margin bounding-box">
+                <div class = "box no-margin">
+                    <a href=""><p class="no-margin link-nonactive">List Pasien</p></a>
+                </div>
+    
+                <div class="no-margin bounding-box">
+                    <div class = "box no-margin">
+                        <a href=""><p class="no-margin link-nonactive">List Dokter</p></a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-------DASHBOARD------>
+
+        <div class="dashboard-frame">
+            <h1 class="no-margin bigger-logo"><span class="Med">Med</span><span Class="Space">Space</span></h1>
+
+            <div class="info-frame">
+                <div class="info-isi">
+                    <h2 class="no-margin info-title">Room Capacity</h2>
+                    <div class="circle no-margin">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 110 110" fill="none">
+                            <circle cx="55" cy="55" r="55" fill="#D9D9D9"/>
+                            <path d="M110 55C110 65.878 106.774 76.5117 100.731 85.5564C94.6874 94.6011 86.0975 101.651 76.0476 105.813C65.9977 109.976 54.939 111.065 44.27 108.943C33.6011 106.821 23.801 101.583 16.1091 93.8909C8.41724 86.199 3.179 76.3989 1.05681 65.73C-1.06538 55.061 0.023806 44.0023 4.18663 33.9524C8.34945 23.9025 15.3989 15.3126 24.4436 9.26917C33.4883 3.22569 44.122 -1.29719e-07 55 0L55 55H110Z" fill="#04739B"/>
+                          </svg>
+                        </div>
+                    <h3 class="no-margin info-detail" id="percentage">75%</h3>
+                </div>
+
+                <div class="info-isi">
+                    <h2 class="no-margin info-title">Patient Count</h2>
+                    <h4 class="patient-count no-margin">125</h4>
+                    <h3 class="no-margin info-detail" id="patient-label">patient</h3>
+                </div>
+
+                <div class="info-isi isi-big">
+                    <h2 class="no-margin info-title">Room Count</h2>
+
+                    <div class="count">
+                        <div class="text-count1">
+                            <h4 class="patient-count no-margin">30</h4>
+                            <h3 class="no-margin info-detail" id="patient-label">available rooms</h3>
+                        </div>
+
+                        <div class="text-container">
+                            <div class="text-count2">
+                                <h4 class="room-count no-margin">14</h4>
+                                <h3 class="no-margin info-detail" id="room-label">VIP rooms</h3>
+                            </div>
+
+                            <div class="text-count2">
+                                <h4 class="room-count no-margin">16</h4>
+                                <h3 class="no-margin info-detail" id="room-label">Regular rooms</h3>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabel-pasien">
+                <div class="header-patient">
+                    <h5 class="no-margin" id="patient-list">Patient List</h5>
+                    <a class="button-text">More -></a>
+                </div>
+                <table>
+                    <tr>
+                        <th class="header-table table-name">Name</th>
+                        <th class="header-table table-room">Room</th>
+                        <th class="header-table table-area">Area</th>
+                        <th class="header-table table-status">Status</th>
+                    </tr>
+
+                    <tr>
+                        <td class="data-table table-name">Kenzie</th>
+                        <td class="data-table table-room">1011</td>
+                        <td class="data-table table-area">Hibiscus</td>
+                        <td class="data-table table-status">Checked In</td>
+                    </tr>
+                    <tr>
+                        <td class="data-table table-name">Kenzie</th>
+                        <td class="data-table table-room">1011</td>
+                        <td class="data-table table-area">Hibiscus</td>
+                        <td class="data-table table-status">Checked In</td>
+                    </tr>
+                    <tr>
+                        <td class="data-table table-name">Kenzie</th>
+                        <td class="data-table table-room">1011</td>
+                        <td class="data-table table-area">Hibiscus</td>
+                        <td class="data-table table-status">Checked In</td>
+                    </tr>
+                    <tr>
+                        <td class="data-table table-name">Kenzie</th>
+                        <td class="data-table table-room">1011</td>
+                        <td class="data-table table-area">Hibiscus</td>
+                        <td class="data-table table-status">Checked In</td>
+                    </tr>
+                    <tr>
+                        <td class="data-table table-name">Kenzie</th>
+                        <td class="data-table table-room">1011</td>
+                        <td class="data-table table-area">Hibiscus</td>
+                        <td class="data-table table-status">Checked In</td>
+                    </tr>
+                    <tr>
+                        <td class="data-table table-name">Kenzie</th>
+                        <td class="data-table table-room">1011</td>
+                        <td class="data-table table-area">Hibiscus</td>
+                        <td class="data-table table-status">Checked In</td>
+                    </tr>
+                    <tr>
+                        <td class="data-table table-name">Kenzie</th>
+                        <td class="data-table table-room">1011</td>
+                        <td class="data-table table-area">Hibiscus</td>
+                        <td class="data-table table-status">Checked In</td>
+                    </tr>
+                    <tr>
+                        <td class="data-table table-name">Kenzie</th>
+                        <td class="data-table table-room">1011</td>
+                        <td class="data-table table-area">Hibiscus</td>
+                        <td class="data-table table-status">Checked In</td>
+                    </tr>
+                    <tr>
+                        <td class="data-table table-name">Kenzie</th>
+                        <td class="data-table table-room">1011</td>
+                        <td class="data-table table-area">Hibiscus</td>
+                        <td class="data-table table-status">Checked In</td>
+                    </tr>
+                    <tr>
+                        <td class="data-table table-name">Kenzie</th>
+                        <td class="data-table table-room">1011</td>
+                        <td class="data-table table-area">Hibiscus</td>
+                        <td class="data-table table-status">Checked In</td>
+                    </tr>
+                    <tr></tr>
+                        <td class="data-table table-name">Kenzie</th>
+                        <td class="data-table table-room">1011</td>
+                        <td class="data-table table-area">Hibiscus</td>
+                        <td class="data-table table-status">Checked In</td>
+                    </tr>
+                    <tr>
+                        <td class="data-table table-name">Kenzie</th>
+                        <td class="data-table table-room">1011</td>
+                        <td class="data-table table-area">Hibiscus</td>
+                        <td class="data-table table-status">Checked In</td>
+                    </tr>
+                    <tr>
+                        <td class="data-table table-name">Kenzie</th>
+                        <td class="data-table table-room">1011</td>
+                        <td class="data-table table-area">Hibiscus</td>
+                        <td class="data-table table-status">Checked In</td>
+                    </tr>
+                    <tr>
+                        <td class="data-table table-name">Kenzie</th>
+                        <td class="data-table table-room">1011</td>
+                        <td class="data-table table-area">Hibiscus</td>
+                        <td class="data-table table-status">Checked In</td>
+                        </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+        
     
 </body>
 </html>
