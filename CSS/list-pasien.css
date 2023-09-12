@@ -163,9 +163,9 @@ a{
 
 .patient-list{
     font-family: Poppins;
+    padding: 20px;
     width: 1185px;
     height: 685px;
-    padding: 20px;
     margin-top: 15px;
     margin-left: 300px;
     background: #fff;
