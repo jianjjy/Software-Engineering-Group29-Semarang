@@ -1,0 +1,145 @@
+.menu-toggle span {
+  height: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle input:checked ~ .menu-btn span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle input:checked ~ .menu-btn span:nth-child(1) {
+  transform: translateY(8px); rotate: (45deg);
+}
+
+.menu-toggle input:checked ~ .menu-btn span:nth-child(1) {
+  transform: translateY(-8px); rotate: (45deg);
+}
+
+body {
+  background-color: #f5f4f7;
+}
+h1 {
+  color: #7fbcd2;
+}
+table,
+td,
+th {
+  border: 1px solid black;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: blue;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+input {
+  width: 5000px;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border: radius 1px;
+}
+
+table {
+  margin: auto;
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: rgb(36, 36, 201);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  justify-content: space-around;
+}
+
+button {
+  background-color: #daebff;
+  color: #023c7d;
+  justify-content: space-around;
+}
+
+th {
+  color: #195190;
+  font-size: larger;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+button {
+  float: right;
+  background-color: #d9d9d9;
+  width: 130px;
+  height: 7%;
+  font-size: medium;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+button {
+  margin: 10px;
+  padding: 10px;
+  background-color: #478CA5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.frame {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-container {
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  height: fit-content;
+}
