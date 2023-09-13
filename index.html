@@ -10,6 +10,31 @@
 
 </head>
 <body>
+    <nav>
+        <div class="no-margin">
+            <span class="Med">Med</span><span Class="Space">Space</span>
+        </div>
+        <div class="flex-row list-a">
+                <div class = "active box-nav no-margin">
+                    <a href="index.html"><p class="no-margin ">Dashboard</p></a>
+                </div>
+    
+                
+                    <div class = "nonactive box-nav no-margin">
+                        <a href="room.html"><p class="no-margin ">Rooms</p></a>
+                    </div>
+                
+                <div class = "nonactive box-nav no-margin">
+                    <a href="docter.html"><p class="no-margin ">Doctors</p></a>
+                </div>
+    
+                
+                    <div class = "nonactive box-nav no-margin">
+                        <a href="patient.html"><p class="no-margin "> Patients</p></a>
+                    </div>
+                
+        </div>
+    </nav>
     <div class="flex-all">
         <aside class="flex-col noscroll">
             <h1 class="no-margin"><span class="Med">Med</span><span Class="Space">Space</span></h1>
@@ -28,12 +53,12 @@
     
             <div class="no-margin bounding-box">
                 <div class = "active box no-margin">
-                    <a href=""><p class="no-margin link-active">Dashboard</p></a>
+                    <a href="index.html"><p class="no-margin ">Dashboard</p></a>
                 </div>
     
                 <div class="no-margin bounding-box">
-                    <div class = "box no-margin">
-                        <a href=""><p class="no-margin link-nonactive">Room Availability</p></a>
+                    <div class = "nonactive box no-margin">
+                        <a href="room.html"><p class="no-margin ">Rooms</p></a>
                     </div>
                 </div>
             </div>
@@ -41,13 +66,13 @@
             <hr class="no-margin">
     
             <div class="no-margin bounding-box">
-                <div class = "box no-margin">
-                    <a href=""><p class="no-margin link-nonactive">List Pasien</p></a>
+                <div class = "nonactive box no-margin">
+                    <a href="docter.html"><p class="no-margin ">Doctors</p></a>
                 </div>
     
                 <div class="no-margin bounding-box">
-                    <div class = "box no-margin">
-                        <a href=""><p class="no-margin link-nonactive">List Dokter</p></a>
+                    <div class = "nonactive box no-margin">
+                        <a href="patient.html"><p class="no-margin ">Patients</p></a>
                     </div>
                 </div>
             </div>
@@ -56,7 +81,7 @@
         <!-------DASHBOARD------>
 
         <div class="dashboard-frame">
-            <h1 class="no-margin bigger-logo"><span class="Med">Med</span><span Class="Space">Space</span></h1>
+            <h1 class="no-margin bigger-logo"><span Class="Hos-Name">Rumah Sakit Melati</span></h1>
 
             <div class="info-frame">
                 <div class="info-isi">
@@ -76,10 +101,12 @@
                     <h3 class="no-margin info-detail" id="patient-label">patient</h3>
                 </div>
 
-                <div class="info-isi isi-big">
+                <div class="info-isi">
                     <h2 class="no-margin info-title">Room Count</h2>
+                    <h4 class="patient-count no-margin">30</h4>
+                    <h3 class="no-margin info-detail" id="patient-label">available rooms</h3>
 
-                    <div class="count">
+                    <!-- <div class="count">
                         <div class="text-count1">
                             <h4 class="patient-count no-margin">30</h4>
                             <h3 class="no-margin info-detail" id="patient-label">available rooms</h3>
@@ -97,7 +124,7 @@
                             </div>
                         </div>
 
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
