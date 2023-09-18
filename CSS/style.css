@@ -485,6 +485,72 @@ flex: 1;
     background: #7FBCD2;
 }
 
+/* DIALOG */
+
+dialog {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+    padding: 2em 4em;
+    border-width: 0;
+}
+
+dialog>table {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+dialog td {
+    border-width: 0 !important;
+}
+
+dialog button {
+    background-color: #7FBCD2;
+    font-family: Poppins;
+    color: white;
+    border: rgba(4, 115, 155, 0.65) 2px solid;
+    padding: 5px 10px;
+    font-size: 1.2em;
+}
+
+dialog button:hover {
+    background-color: #418AA4;
+}
+
+.dropdown {
+    width: 100%;
+  }
+
+  .dropdown select {
+    width: 109%;
+    padding: 5px;
+  }
+
+  .button-row {
+    margin-top: 1em;
+  }
+
+  td input {
+    width: 100%;
+    padding: 5px;
+  }
+
+  #nosave {
+    background: rgba(165, 71, 71, 0.44);
+    border-color: #6e060d;
+    color: #000;
+  }
+
+  #nosave:hover {
+    background: #9B040D;
+    color:#FFF
+  }
+
+
 /* @media (min-width: 799px) {
     .text-container {
         visibility: hidden;
