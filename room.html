@@ -85,15 +85,11 @@
             </div>
             
             <dialog id="no-avail">
-                <h1 class="no-margin bigger-logo"><span Class="Hos-Name">Nomor Ruangan</span></h1>
+                <h1 class="no-margin Hos-Name">Nomor Ruangan</h1>
                 <table>
                     <tr>
                         <td class="data-table table-name">Name:</td>
                         <td class="data-table table-name">Kenzie</td>
-                    </tr>
-                    <tr>
-                        <td class="data-table table-room">Room:</td>
-                        <td class="data-table table-room">1011</td>
                     </tr>
                         
                     <tr>
@@ -106,20 +102,16 @@
                         <td class="data-table table-status">27 September 2023</td>
                     </tr>
                 </table>
-                <button onclick="closeDialog ('no-avail')">Close</button>
+                <button id="nosave" onclick="closeDialog('no-avail')">Close</button>
               </dialog>
 
               <dialog id="avail">
-                <h1 class="no-margin bigger-logo"><span Class="Hos-Name">Nomor Ruangan</span></h1>
+                <h1 class="no-margin Hos-Name">Nomor Ruangan</h1>
                 <form action="" id="data">
                     <table>
                         <tr>
                             <td class="data-table table-name">Name:</td>
                             <td class="data-table table-name"><input type="text" name="Name" placeholder="Name"></td>
-                        </tr>
-                        <tr>
-                            <td class="data-table table-room">Room:</td>
-                            <td class="data-table table-room"><input type="text" name="Room" placeholder="Room"></td>
                         </tr>
 
                         <tr>
@@ -141,7 +133,7 @@
 
                     <div class="flex-row button-row">
                         <button id="submit-button" type="submit">Save</button>
-                        <button id="nosave" onclick="closeDialog ('avail')">Close and Don't Save</button>
+                        <button id="nosave" onclick="closeDialog('avail')">Close and Don't Save</button>
                     </div>
                     
                 </form>
