@@ -17,9 +17,92 @@
     <!-- DIALOG RESERVASI -->
     <dialog id="reserve">
         <h1 class="no-margin Hos-Name">Reservation Form</h1>
-        <form action="" id="data">
-            <label for="fullname">Full Name</label>
-            <input type="text" name="fullname" class="field" placeholder="">
+        <form action="" id="DataPasien">
+            <table cellspacing="4" style="margin-top: 10px;">
+                <tr>
+                    <td>Full Name</td>
+                    <td>
+                        <input type="text" id="name" name="name" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Address</td>
+                    <td>
+                        <textarea cols="20" rows="5" id="alamat" name="alamat" required></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Date Of Birth</td>
+                    <td>
+                        <input type="date" id="tanggal_lahir" name="tanggal_lahir" required>
+                    </td>
+                    <td>City</td>
+                    <td>
+                        <input type="text" id="tempat_lahir" name="tempat_lahir" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Phone Number</td>
+                    <td>
+                        <input type="number" id="no_hp" name="no_hp" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Room Number</td>
+                    <td>
+                        <select id="room_number" name="room_number" required>
+                            <option value="R501" selected>R501</option>
+                            <option value="R502" selected>R502</option>
+                            <option value="R503" selected>R503</option>
+                            <option value="R504" selected>R504</option>
+                            <option value="R505" selected>R505</option>
+                            <option value="R506" selected>R506</option>
+                            <option value="R507" selected>R507</option>
+                            <option value="R508" selected>R508</option>
+                            <option value="R509" selected>R509</option>
+                            <option value="R510" selected>R510</option>
+                            <option value="R511" selected>R511</option>
+                            <option value="R512" selected>R512</option>
+                            <option value="R513" selected>R513</option>
+                            <option value="R514" selected>R514</option>
+                            <option value="R515" selected>R515</option>
+                            <option value="R516" selected>R516</option>
+                            <option value="R517" selected>R517</option>
+                            <option value="R518" selected>R518</option>
+                            <option value="R519" selected>R519</option>
+                            <option value="R520" selected>R520</option>
+                            <option value="R521" selected>R521</option>
+                        </select>
+                    </td>
+                    <td>Goldar</td>
+                    <td>
+                        <select id="goldar" name="goldar" required>
+                            <option value="A+" selected>A+</option>
+                            <option value="B+" selected>B+</option>
+                            <option value="AB+" selected>AB+</option>
+                            <option value="O+" selected>O+</option>
+                            <option value="A-" selected>A-</option>
+                            <option value="B-" selected>B-</option>
+                            <option value="AB-" selected>AB-</option>
+                            <option value="O-" selected>O-</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <button type="submit" onclick="submitForm()">Done</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+            <!--<label for="fullname">Full Name</label>
+            <input type="text" id="name" name="name" required>
             <table>
                 <tr>
                     <td class="data-table table-name">Name:</td>
@@ -49,11 +132,7 @@
             <div class="flex-row button-row">
                 <button id="nosave" onclick="closeDialog('avail')">Don't Save</button>
                 <button id="submit-button" type="submit">Save</button>
-            </div>
-
-        </form>
-
-
+            </div>-->
     </dialog>
     <!-- END DIALOG -->
 
