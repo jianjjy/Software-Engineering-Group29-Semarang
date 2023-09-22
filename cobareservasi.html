@@ -18,90 +18,81 @@
 			<h2>Reservation Form</h2>
 		</div>
 		<form id="DataPasien">
-			<!--<div class="room" style="border: 1px solid black;"> -->
-				<table cellspacing="4" style="margin-top: 10px;">
-					<!--<tr>
-						<h2 style="font-size: 20px; font-weight: 800; text-align: center; color: #6A79CB; background-color: #E6F4F7;">Reservation Form</h2>
-						<br>
-					</tr> -->
+            		<table cellspacing="4" style="margin-top: 10px;">
+				<tr>
+					<td>Full Name</td>
+					<td>
+						<input type="text" id="name" name="name" required>
+					</td>
+				</tr>
 
-					<tr>
-						<td>Full Name</td>
-						<td>
-							<input type="text" id="name" name="name" required>
-						</td>
-					</tr>
+				<tr>
+					<td>Address</td>
+					<td>
+						<textarea cols="20" rows="5" id="alamat" name="alamat" required></textarea>
+					</td>
+				</tr>
 
-					<tr>
-						<td>Address</td>
-						<td>
-							<textarea cols="20" rows="5" id="alamat" name="alamat" required></textarea>
-						</td>
-					</tr>
+				<tr>
+					<td>Date Of Birth</td>
+					<td>
+						<input type="date" id="tanggal_lahir" name="tanggal_lahir" required>
+					</td>
+					<td>City</td>
+					<td>
+						<input type="text" id="tempat_lahir" name="tempat_lahir" required>
+					</td>
+				</tr>
 
-					<tr>
-						<td>Date Of Birth</td>
-						<td>
-							<input type="date" id="tanggal_lahir" name="tanggal_lahir" required>
-						</td>
-						<td>City</td>
-						<td>
-							<input type="text" id="tempat_lahir" name="tempat_lahir" required>
-						</td>
-					</tr>
+				<tr>
+					<td>Phone Number</td>
+					<td>
+						<input type="number" id="no_hp" name="no_hp" required>
+					</td>
+				</tr>
 
-					<tr>
-						<td>Phone Number</td>
-						<td>
-							<input type="number" id="no_hp" name="no_hp" required>
-						</td>
-					</tr>
+				<tr>
+					<td>Room Number</td>
+					<td>
+						<select id="room_number" name="room_number" required>
+	        				<option value="R501" selected>R501</option>
+	        				<option value="R502" selected>R502</option>
+	        				<option value="R503" selected>R503</option>
+	        				<option value="R504" selected>R504</option>
+	        				<option value="R505" selected>R505</option>
+	        				<option value="R506" selected>R506</option>
+	        				<option value="R507" selected>R507</option>
+	        				<option value="R508" selected>R508</option>
+	        				<option value="R509" selected>R509</option>
+	        				<option value="R510" selected>R510</option>
+	        				<option value="R511" selected>R511</option>
+	        				<option value="R512" selected>R512</option>
+	        				<option value="R513" selected>R513</option>
+	    					<option value="R514" selected>R514</option>
+	    					<option value="R515" selected>R515</option>
+        					<option value="R516" selected>R516</option>
+	    					<option value="R517" selected>R517</option>
+        					<option value="R518" selected>R518</option>
+        					<option value="R519" selected>R519</option>
+        					<option value="R520" selected>R520</option>
+        					<option value="R521" selected>R521</option>
+						</select>
+					</td>
+					<td>Room Type</td>
+					<td>
+						<select id="room_type" name="room_type" required>
+	        				<option value="VIP" selected>VIP</option>
+	        				<option value="Reguler" selected>Reguler</option>
+	    				</select>
+					</td>
+				</tr>
 
-					<tr>
-						<td>Room Number</td>
-						<td>
-							<select id="room_number" name="room_number" required>
-	        					<option value="R501" selected>R501</option>
-	        					<option value="R502" selected>R502</option>
-	        					<option value="R503" selected>R503</option>
-	        					<option value="R504" selected>R504</option>
-	        					<option value="R505" selected>R505</option>
-	        					<option value="R506" selected>R506</option>
-	        					<option value="R507" selected>R507</option>
-	        					<option value="R508" selected>R508</option>
-	        					<option value="R509" selected>R509</option>
-	        					<option value="R510" selected>R510</option>
-	        					<option value="R511" selected>R511</option>
-	        					<option value="R512" selected>R512</option>
-	        					<option value="R513" selected>R513</option>
-	        					<option value="R514" selected>R514</option>
-	        					<option value="R515" selected>R515</option>
-	        					<option value="R516" selected>R516</option>
-	        					<option value="R517" selected>R517</option>
-	        					<option value="R518" selected>R518</option>
-	        					<option value="R519" selected>R519</option>
-	        					<option value="R520" selected>R520</option>
-	        					<option value="R521" selected>R521</option>
-	    					</select>
-						</td>
-						<td>Room Type</td>
-						<td>
-							<select id="room_type" name="room_type" required>
-	        					<option value="VIP" selected>VIP</option>
-	        					<option value="Reguler" selected>Reguler</option>
-	    					</select>
-						</td>
-					</tr>
-
-					<tr>
-						<td>
-							<!--style="width: 80px; position: absolute; right: 7%; background-color: #8BA4D6; color: black; border-radius: 15px; padding-left: 0; margin-top: 15px; font-size: 15px; font-weight: 150; cursor: pointer; transition: all 0.3s ease;" type="submit" value="Done" class="submit-btn" name="submit" id="hasil" onclick="SubmitData()">-->
-							<button type="submit" onclick="submitForm()">Done</button>
-						</td>
-						</td>
-					</tr>
-				</table>
-			<!--</div>-->
+				<tr>
+					<td>
+					    <button type="submit" onclick="submitForm()">Done</button>
+					</td>
+				</tr>
+			</table>
 		</form>
 	</div>
 	<script src="reservasi.js"></script>
