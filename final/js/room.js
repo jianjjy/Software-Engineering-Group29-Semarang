@@ -14,6 +14,9 @@ function openDialog(clickedDiv) {
   }
 
   function closeDialog(dialogId) {
+    if (dialogId == 'avail') {
+      alert ('Do you want to close this tab?')
+    }
     document.getElementById(dialogId).close();
   }
 

@@ -9,14 +9,16 @@ nav {
     margin-top: 0;
     display: flex;
     justify-content: space-around;
-    padding:1rem;
+    padding: 1rem;
     position: fixed;
-    top:0;
+    top: 0;
     margin-bottom: 2rem;
 }
+
 .list-a {
     align-items: stretch;
 }
+
 .box-nav {
     width: 100% !important;
     display: flex;
@@ -26,7 +28,7 @@ nav {
     border-radius: 7px;
 }
 
-.no-margin{
+.no-margin {
     margin: 0;
     padding: 0;
 }
@@ -44,7 +46,8 @@ nav {
     min-height: 0;
     flex: 1;
 }
-body{
+
+body {
     width: 100vw;
     height: 100vh;
     margin: 0;
@@ -63,18 +66,23 @@ aside {
     /* visibility: hidden; */
 }
 
-.flex-row{
+.flex-row {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: var(--gap, 1rem);
 }
 
-.flex-col{
+.flex-col {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 28px;
+}
+
+.login-form {
+    width: 20em;
+    margin: auto;
 }
 
 
@@ -111,6 +119,7 @@ hr {
     font-weight: 700;
     line-height: normal;
 }
+
 .Hos-Name {
     color: #5D7AB5;
     font-family: Poppins;
@@ -119,6 +128,7 @@ hr {
     font-weight: 700;
     line-height: normal;
 }
+
 .Space {
     color: #7FBCD2;
     font-family: Poppins;
@@ -189,7 +199,7 @@ hr {
     line-height: normal;
 } */
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -197,7 +207,7 @@ a{
     height: 100vh;
     position: fixed;
     top: 0;
-    bottom:0;
+    bottom: 0;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -212,7 +222,7 @@ a{
     gap: 11px;
     flex-shrink: 0;
     align-self: stretch;
-    
+
 
     min-height: 0;
     flex: 1;
@@ -243,14 +253,14 @@ a{
     align-self: stretch;
     border-radius: 18px;
     background: #FFF;
-    
+
 }
 
 .circle {
     display: flex;
-    flex:1 1 auto;
-    justify-content:center;
-    align-items:center;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .info-title {
@@ -310,15 +320,15 @@ a{
 
 .text-container {
     display: flex;
-flex-direction: column;
-align-items: flex-start;
-gap: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
 }
 
-.text-count2{
+.text-count2 {
     display: flex;
-align-items: center;
-gap: 10px;
+    align-items: center;
+    gap: 10px;
 }
 
 .room-count {
@@ -338,7 +348,8 @@ gap: 10px;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: 104%; /* 17.607px */
+    line-height: 104%;
+    /* 17.607px */
     text-align: left;
 }
 
@@ -363,53 +374,58 @@ table {
 
 .header-patient {
     display: flex;
-justify-content: space-between;
-align-items: flex-start;
-align-self: stretch;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
 }
 
 #patient-list {
     color: #00000E;
-font-family: Poppins;
-font-size: 20px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
 
 .button-text {
     color: #0177FC;
-text-align: right;
-font-family: Poppins;
-font-size: 20px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
+    text-align: right;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
 
 .header-table {
     color: #0177FC;
-text-align: center;
-font-family: Poppins;
-font-size: 15px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
+
 .table-name {
-     width: 50%
+    width: 50%
 }
+
 .table-room {
     width: 20%
 }
+
 .table-area {
     width: 20%
 }
+
 .table-status {
     width: 10%
 }
 
-th, td{
+th,
+td {
     border: #000000 1px solid;
 }
 
@@ -423,7 +439,7 @@ th, td{
 }
 
 .heading1 {
-    gap:0 !important;
+    gap: 0 !important;
     align-items: flex-start;
 }
 
@@ -438,20 +454,20 @@ th, td{
 
 .room-number {
     color: #FFF;
-font-family: Poppins;
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
 .availabilty {
     color: #FFF;
-font-family: Poppins;
-font-size: 15px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
 .room-frame {
@@ -471,13 +487,13 @@ line-height: normal;
 
 .flex-wrap {
     display: flex;
-align-items: flex-start;
-align-content: flex-start;
-gap: 20px;
-flex: 1 0 0;
-align-self: stretch;
-flex-wrap: wrap;
-flex: 1;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 20px;
+    flex: 1 0 0;
+    align-self: stretch;
+    flex-wrap: wrap;
+    flex: 1;
     overflow-y: auto;
 }
 
@@ -489,11 +505,11 @@ flex: 1;
 
 dialog {
     position: absolute;
-    top:0;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    
+
     margin: auto;
     padding: 2em 4em;
     border-width: 0;
@@ -509,47 +525,124 @@ dialog td {
 }
 
 dialog button {
+    width: 100%;
+    padding: .7em;
     background-color: #7FBCD2;
-    font-family: Poppins;
-    color: white;
-    border: rgba(4, 115, 155, 0.65) 2px solid;
-    padding: 5px 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
     font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 dialog button:hover {
-    background-color: #418AA4;
+    background-color: #5D7AB5;
 }
 
 .dropdown {
     width: 100%;
-  }
+}
 
-  .dropdown select {
+.dropdown select {
     width: 109%;
     padding: 5px;
-  }
+}
 
-  .button-row {
+.button-row {
     margin-top: 1em;
-  }
+    width: 100%;
+}
 
-  td input {
+td input {
     width: 100%;
     padding: 5px;
-  }
+}
 
-  #nosave {
-    background: rgba(165, 71, 71, 0.44);
-    border-color: #6e060d;
-    color: #000;
-  }
 
-  #nosave:hover {
+
+#nosave {
+    background: rgba(165, 71, 71, 0.0);
+    border: 2px solid #6e060d;
+    color: #6e060d;
+}
+
+#nosave:hover {
     background: #9B040D;
-    color:#FFF
-  }
+    color: #FFF
+}
 
+/* LOGIN PAGE */
+
+
+form input[type="submit"] {
+    width: 100%;
+    padding: .7em;
+    background-color: #7FBCD2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #5D7AB5;
+}
+
+.body-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* FORMS */
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.field {
+    display: flex;
+    width: calc(100% - 2em);
+    padding: 0.5em 1em;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5em;
+    background: rgba(127, 188, 210, 0.25);
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.login-button {
+    margin-top: 1.2em;
+    width: 70% !important;
+    align-self: auto;
+}
+
+.login-field {
+    margin: 0 0 2em 0;
+    height: 3em;
+}
+
+.field::placeholder {
+    color: #929292;
+    font-family: Poppins;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+input[type="email"]:focus, input[type="password"] {
+    border: .2em solid #7FBCD2;
+}
 
 /* @media (min-width: 799px) {
     .text-container {
@@ -558,16 +651,18 @@ dialog button:hover {
 } */
 
 @media (max-width: 768px) {
-    nav{
+    nav {
         visibility: visible;
     }
+
     aside {
         visibility: hidden;
     }
+
     .text-container {
         visibility: visible;
     }
-    
+
     .dashboard-frame {
         min-height: 0;
         flex: 1;
@@ -576,27 +671,30 @@ dialog button:hover {
         margin-top: 5em;
         padding: 0;
     }
-    .flex-all{
+
+    .flex-all {
         min-height: 0;
         flex: 1;
     }
+
     .box-nav a p {
         font-size: small;
     }
+
     .list-a a p {
         text-align: center;
         padding: 0 10px;
     }
+
     .info-frame {
         flex-wrap: wrap;
+        height: fit-content;
     }
+
     .info-isi {
         width: 40%;
         justify-content: space-around;
     }
 }
 
-@media (min-width: 576px) {
-
-}
-
+@media (min-width: 576px) {}
