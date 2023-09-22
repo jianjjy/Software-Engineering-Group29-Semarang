@@ -398,7 +398,7 @@ table {
     line-height: normal;
 }
 
-.header-table {
+/* .header-table {
     color: #0177FC;
     text-align: center;
     font-family: Poppins;
@@ -406,7 +406,7 @@ table {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-}
+} */
 
 .table-name {
     width: 50%
@@ -424,7 +424,7 @@ table {
     width: 10%
 }
 
-th,
+/* th,
 td {
     border: #000000 1px solid;
 }
@@ -436,7 +436,7 @@ td {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
+} */
 
 .heading1 {
     gap: 0 !important;
@@ -711,21 +711,21 @@ input[type="email"]:focus, input[type="password"] {
   }
 
 
-  #doctor-list-table th {
+  table th {
     font-family: poppins;
     background-color: #04739B;
     padding: .4em;
     border: white 1px solid;
-    color: white;
+    color: white !important;
 
 }
 
-#doctor-list-table td {
+table td {
     font-family: poppins;
     background-color: #04739B;
     padding: .4em;
     border: white 1px solid;
-    color: white;
+    color: white !important;
 
 }
 
@@ -744,6 +744,15 @@ input[type="email"]:focus, input[type="password"] {
         visibility: hidden;
     }
 } */
+@media (max-width: 1101px) {
+    #room-details {
+        display: none;
+    }
+    .info-isi {
+        flex: 1;
+    }
+}
+
 
 @media (max-width: 768px) {
     nav {
@@ -784,10 +793,11 @@ input[type="email"]:focus, input[type="password"] {
     .info-frame {
         flex-wrap: wrap;
         height: fit-content;
+        justify-content: center;
     }
 
     .info-isi {
-        width: 40%;
+        /* width: 40%; */
         justify-content: space-around;
     }
 }
