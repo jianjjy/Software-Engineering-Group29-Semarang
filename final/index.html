@@ -10,6 +10,53 @@
 
 </head>
 <body>
+    <!-- BUTTON ADD -->
+    <button id="add-reserve" onclick="openReserveDialog()">+</button>
+    <!-- BUTTON ADD END -->
+
+    <!-- DIALOG RESERVASI -->
+    <dialog id="reserve">
+        <h1 class="no-margin Hos-Name">Reservation Form</h1>
+        <form action="" id="data">
+            <label for="fullname">Full Name</label>
+            <input type="text" name="fullname" class="field" placeholder="">
+            <table>
+                <tr>
+                    <td class="data-table table-name">Name:</td>
+                    <td class="data-table table-name"></td>
+                </tr>
+
+                <tr>
+                    <td class="data-table table-area">Area:</td>
+                    <td class="data-table table-area">
+                        <div class="dropdown field">
+                            <select name="input2">
+                                <option value="Option1">Hibiscus</option>
+                                <option value="Option2">Orchard</option>
+                                <option value="Option3">Bloom</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="data-table table-status">Date Checked In:</td>
+                    <td class="data-table table-status"><input type="date" name="Check In Date"
+                            pattern="yyyy-mm-dd"></td>
+                </tr>
+            </table>
+
+            <div class="flex-row button-row">
+                <button id="nosave" onclick="closeDialog('avail')">Don't Save</button>
+                <button id="submit-button" type="submit">Save</button>
+            </div>
+
+        </form>
+
+
+    </dialog>
+    <!-- END DIALOG -->
+
     <nav>
         <div class="no-margin">
             <span class="Med">Med</span><span Class="Space">Space</span>
@@ -85,7 +132,7 @@
 
             <div class="info-frame">
                 <div class="info-isi">
-                    <h2 class="no-margin info-title">Room Capacity</h2>
+                    <h2 class="no-margin info-title" onclick="">Room Capacity</h2>
                     <div class="circle no-margin">
                         <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 110 110" fill="none">
                             <circle cx="55" cy="55" r="55" fill="#D9D9D9"/>
@@ -102,8 +149,8 @@
                 </div>
 
                 <div class="info-isi ">
-                    <!-- <h2 class="no-margin info-title">Room Count</h2>
-                    <h4 class="patient-count no-margin">30</h4>
+                    <h2 class="no-margin info-title">Room Count</h2>
+                    <!-- <h4 class="patient-count no-margin">30</h4>
                     <h3 class="no-margin info-detail" id="patient-label">available rooms</h3> -->
 
                     <div class="count">
@@ -230,6 +277,8 @@
         </div>
     </div>
         
+    <script src="js/index.js"></script>
+    
     
 </body>
 </html>

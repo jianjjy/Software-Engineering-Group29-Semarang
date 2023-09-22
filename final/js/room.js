@@ -1,5 +1,3 @@
-const modalactive = document.getElementById("modal-active");
-
 function openDialog(clickedDiv) {
     let roomNum = clickedDiv.firstElementChild.innerHTML;
     var classNames = clickedDiv.className.split(" ");

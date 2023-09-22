@@ -644,6 +644,32 @@ input[type="email"]:focus, input[type="password"] {
     border: .2em solid #7FBCD2;
 }
 
+  
+#add-reserve {
+    position: absolute;
+    bottom: 2em; /* Adjust top position as needed */
+    right: 2em; /* Adjust left position as needed */
+    display: flex;
+    width: 5em;
+    height: 5em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: calc(5em/2);
+    background: #0177FC;
+    color: white;
+    box-shadow: none;
+    /* font-size: 1.2em; */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+  }
+
+  #add-reserve:hover {
+    background-color: #5D7AB5;
+  }
+
 /* @media (min-width: 799px) {
     .text-container {
         visibility: hidden;
