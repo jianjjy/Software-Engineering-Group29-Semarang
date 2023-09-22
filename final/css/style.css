@@ -670,6 +670,75 @@ input[type="email"]:focus, input[type="password"] {
     background-color: #5D7AB5;
   }
 
+/* DOKTER LIST */
+.filter-row {
+    flex-wrap: wrap;
+    gap: .5em
+}
+
+.day-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .5em
+}
+.filter-button {
+    color: #ffffff;
+    background-color: #7FBCD2;
+    padding: .5em 1em;
+    font-family: Poppins;
+    border-radius: 3em;
+    box-shadow: none !important;
+    border: none;
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+  }
+
+  .filter-button:hover {
+    background-color: #5D7AB5;
+  }
+
+  .day-avail{
+    color: #04739B;
+    background-color: #fff;
+    padding: .2em 1em;
+    font-family: Poppins;
+    border-radius: 3em;
+    box-shadow: none !important;
+    border: none;
+    font-weight: 300;
+    font-size: 0.9em;
+  }
+
+
+  #doctor-list-table th {
+    font-family: poppins;
+    background-color: #04739B;
+    padding: .4em;
+    border: white 1px solid;
+    color: white;
+
+}
+
+#doctor-list-table td {
+    font-family: poppins;
+    background-color: #04739B;
+    padding: .4em;
+    border: white 1px solid;
+    color: white;
+
+}
+
+.list-name {
+    width: 40%
+}
+.list-specialty{
+    width: 20%
+}
+.list-availability{
+    width: 40%;
+}
+
 /* @media (min-width: 799px) {
     .text-container {
         visibility: hidden;
