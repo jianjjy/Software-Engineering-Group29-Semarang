@@ -102,7 +102,12 @@
         <div class="dashboard-frame">
             <div class="flex-col heading1">
                 <h1 class="no-margin bigger-logo"><span Class="Hos-Name">Rumah Sakit Melati</span></h1>
-                <h2 class="no-margin sublocation">Lantai 5, Area Hibiscus</h2>
+            </div>
+
+            <div class="flex-row filter-row">
+                <button class="filter-button" onclick="filter_floor('all')">All</button>
+                <button class="filter-button" onclick="filter_floor(5)">5th Floor</button>
+                <button class="filter-button" onclick="filter_floor(6)">6th Floor</button>
             </div>
 
             <dialog id="no-avail">
@@ -166,149 +171,7 @@
 
             </dialog>
 
-            <div class="flex-wrap">
-                <div class="room-frame avail no-margin" onclick="openDialog(this)">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame no-avail no-margin" onclick="openDialog(this)">
-                    <h1 class="room-number no-margin">R. 502</h1>
-                    <h1 class="availabilty no-margin">Reserved</h1>
-                </div>
-                <div class="room-frame avail no-margin" onclick="openDialog(this)">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame avail no-margin" onclick="openDialog(this)">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame avail no-margin" onclick="openDialog(this)">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
-                <div class="room-frame avail no-margin">
-                    <h1 class="room-number no-margin">R. 501</h1>
-                    <h1 class="availabilty no-margin">Available</h1>
-                </div>
+            <div class="flex-wrap" id="roomInfo">
                 <div class="room-frame avail no-margin">
                     <h1 class="room-number no-margin">R. 501</h1>
                     <h1 class="availabilty no-margin">Available</h1>

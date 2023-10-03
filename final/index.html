@@ -1,138 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link href="css/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
 </head>
+
 <body>
     <!-- BUTTON ADD -->
-    <button id="add-reserve" onclick="openReserveDialog()">+</button>
+    <button id="add-reserve" class="hello test aja" onclick="showButtons()">+</button>
+    <div class="hiddenbutton" id="hiddenbuttons">
+        <button id="add-patient" onclick="openDialog('reserve')">Add Patient</button>
+        <button id="add-doctor" onclick="openDialog('doctor')">Add Doctor</button>
+        <button id="add-room" onclick="openDialog('room')">Add Room</button>
+    </div>
+
+
     <!-- BUTTON ADD END -->
 
     <!-- DIALOG RESERVASI -->
     <dialog id="reserve">
         <h1 class="no-margin Hos-Name">Reservation Form</h1>
         <form action="" id="DataPasien">
-            <table cellspacing="4" style="margin-top: 10px;">
+            <table class="form-table">
                 <tr>
-                    <td>Full Name</td>
-                    <td>
-                        <input type="text" id="name" name="name" required>
-                    </td>
+                    <td class="data-table">Name:</td>
+                    <td class="data-table table-name"><input type="text" name="name-patient" class="field"
+                            placeholder="Name"></td>
                 </tr>
 
                 <tr>
-                    <td>Address</td>
-                    <td>
-                        <textarea cols="20" rows="5" id="alamat" name="alamat" required></textarea>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Date Of Birth</td>
-                    <td>
-                        <input type="date" id="tanggal_lahir" name="tanggal_lahir" required>
-                    </td>
-                    <td>City</td>
-                    <td>
-                        <input type="text" id="tempat_lahir" name="tempat_lahir" required>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Phone Number</td>
-                    <td>
-                        <input type="number" id="no_hp" name="no_hp" required>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Room Number</td>
-                    <td>
-                        <select id="room_number" name="room_number" required>
-                            <option value="R501" selected>R501</option>
-                            <option value="R502" selected>R502</option>
-                            <option value="R503" selected>R503</option>
-                            <option value="R504" selected>R504</option>
-                            <option value="R505" selected>R505</option>
-                            <option value="R506" selected>R506</option>
-                            <option value="R507" selected>R507</option>
-                            <option value="R508" selected>R508</option>
-                            <option value="R509" selected>R509</option>
-                            <option value="R510" selected>R510</option>
-                            <option value="R511" selected>R511</option>
-                            <option value="R512" selected>R512</option>
-                            <option value="R513" selected>R513</option>
-                            <option value="R514" selected>R514</option>
-                            <option value="R515" selected>R515</option>
-                            <option value="R516" selected>R516</option>
-                            <option value="R517" selected>R517</option>
-                            <option value="R518" selected>R518</option>
-                            <option value="R519" selected>R519</option>
-                            <option value="R520" selected>R520</option>
-                            <option value="R521" selected>R521</option>
-                        </select>
-                    </td>
-                    <td>Goldar</td>
-                    <td>
-                        <select id="goldar" name="goldar" required>
-                            <option value="A+" selected>A+</option>
-                            <option value="B+" selected>B+</option>
-                            <option value="AB+" selected>AB+</option>
-                            <option value="O+" selected>O+</option>
-                            <option value="A-" selected>A-</option>
-                            <option value="B-" selected>B-</option>
-                            <option value="AB-" selected>AB-</option>
-                            <option value="O-" selected>O-</option>
-                        </select>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <button type="submit" onclick="submitForm()">Done</button>
-                    </td>
-                </tr>
-            </table>
-        </form>
-
-            <!--<label for="fullname">Full Name</label>
-            <input type="text" id="name" name="name" required>
-            <table>
-                <tr>
-                    <td class="data-table table-name">Name:</td>
-                    <td class="data-table table-name"></td>
-                </tr>
-
-                <tr>
-                    <td class="data-table table-area">Area:</td>
-                    <td class="data-table table-area">
-                        <div class="dropdown field">
-                            <select name="input2">
-                                <option value="Option1">Hibiscus</option>
-                                <option value="Option2">Orchard</option>
-                                <option value="Option3">Bloom</option>
-                            </select>
+                    <td class="data-table">Gender:</td>
+                    <td class="data-table table-name">
+                        <div class="flex-row">
+                            <div class="flex-row">
+                                <label>
+                                    <input type="radio" name="gender" value="Male">
+                                    Male
+                                </label>
+                            </div>
+                            <div class="flex-row">
+                                <label>
+                                    <input type="radio" name="gender" value="Female">
+                                    Female
+                                </label>
+                            </div>
                         </div>
                     </td>
                 </tr>
 
                 <tr>
-                    <td class="data-table table-status">Date Checked In:</td>
-                    <td class="data-table table-status"><input type="date" name="Check In Date"
-                            pattern="yyyy-mm-dd"></td>
+                    <td class="data-table table-name">Address:</td>
+                    <td class="data-table table-name"><textarea class="field" name="address"></textarea></td>
                 </tr>
+
+                <tr>
+                    <td class="data-table table-name">Date of Birth:</td>
+                    <td class="data-table table-name"><input type="date" name="birthdate" class="field"
+                            placeholder="Birthdate"></td>
+                </tr>
+
+                <tr>
+                    <td class="data-table table-name">Place of Birth:</td>
+                    <td class="data-table table-name"><input type="text" name="birthplace" class="field"
+                            placeholder="Place of Birth"></td>
+                </tr>
+
+                <tr>
+                    <td class="data-table table-name">Phone Number</td>
+                    <td class="data-table table-name"><input type="text" name="phone" class="field"
+                            placeholder="Phone Number"></td>
+                </tr>
+
+                <tr>
+                    <td class="data-table table-name">Email</td>
+                    <td class="data-table table-name"><input type="email" name="email" class="field"
+                            placeholder="Email"></td>
+                </tr>
+
+                <tr>
+                    <td class="data-table table-name">Blood Type</td>
+                    <td class="data-table table-name">
+                        <input list="blood-type" name="bloodtype" type="text" placeholder="Blood Type" class="field">
+                        <datalist id="blood-type">
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                        </datalist>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="data-table table-name">Room</td>
+                    <td class="data-table table-name">
+                        <input list="room" name="room" type="text" placeholder="Room" class="field">
+                        <datalist id="room">
+                        </datalist>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="data-table table-name">Check in Date:</td>
+                    <td class="data-table table-name"><input type="date" name="checkindate" class="field"
+                            placeholder="Check in Date"></td>
+                </tr>
+            </table>
+
+            <div class="flex-row button-row">
+                <button id="nosave" onclick="closeDialog('reserve')">Don't Save</button>
+                <button id="submit-button" type="submit">Save</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="doctor">
+        <h1 class="no-margin Hos-Name">Add Doctor</h1>
+        <form action="" id="DataDokter">
+            <table class="form-table">
+                <tr>
+                    <td class="data-table">Name:</td>
+                    <td class="data-table table-name"><input type="text" name="Name" class="field" placeholder="Name">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="data-table table-name">Address:</td>
+                    <td class="data-table table-name"><textarea class="field"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td class="data-table table-name">Date of Birth:</td>
+                    <td class="data-table table-name"><input type="date" name="birthdate" class="field"
+                            placeholder="Birthdate"></td>
+                </tr>
+
+                <tr>
+                    <td class="data-table table-name">Place of Birth:</td>
+                    <td class="data-table table-name"><input type="text" name="birthplace" class="field"
+                            placeholder="Place of Birth"></td>
+                </tr>
+
+                <tr>
+                    <td class="data-table table-name">Phone Number</td>
+                    <td class="data-table table-name"><input type="text" name="phone" class="field"
+                            placeholder="Phone Number"></td>
+                </tr>
+
+                <tr>
+                    <td class="data-table table-name">Email</td>
+                    <td class="data-table table-name"><input type="email" name="email" class="field"
+                            placeholder="Email"></td>
+                </tr>
+
+                <tr>
+                    <td class="data-table table-name">Blood Type</td>
+                    <td class="data-table table-name">
+                        <input list="blood-type" name="bloodtype" type="text" placeholder="Blood Type" class="field">
+                        <datalist id="blood-type">
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                        </datalist>
+                    </td>
+                </tr>
+
             </table>
 
             <div class="flex-row button-row">
                 <button id="nosave" onclick="closeDialog('avail')">Don't Save</button>
                 <button id="submit-button" type="submit">Save</button>
-            </div>-->
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="patient-info">
+        <h1 class="no-margin Hos-Name">Add Doctor</h1>
+        <form action="" id="DataDokter">
+            <table class="form-table">
+                <tr>
+                    <td class="data-table">Name:</td>
+                    <td class="data-table table-name">Jian
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="data-table table-name">Date of Birth:</td>
+                    <td class="data-table table-name"></td>
+                </tr>
+
+                <tr>
+                    <td class="data-table table-name">Check in Date:</td>
+                    <td class="data-table table-name"></td>
+                </tr>
+
+                <tr>
+                    <td class="data-table table-name">Phone Number</td>
+                    <td class="data-table table-name"></td>
+                </tr>
+
+                <tr>
+                    <td class="data-table table-name">Email</td>
+                    <td class="data-table table-name"></td>
+                </tr>
+
+                <tr>
+                    <td class="data-table table-name">Blood Type</td>
+                    <td class="data-table table-name">A-
+                    </td>
+                </tr>
+
+            </table>
+
+            <div class="flex-row button-row">
+                <button id="nosave" onclick="closeDialog('patient-info')">Don't Save</button>
+                <button id="submit-button" type="submit">Save</button>
+            </div>
+        </form>
     </dialog>
     <!-- END DIALOG -->
 
@@ -141,64 +241,82 @@
             <span class="Med">Med</span><span Class="Space">Space</span>
         </div>
         <div class="flex-row list-a">
-                <div class = "active box-nav no-margin">
-                    <a href="index.html"><p class="no-margin ">Dashboard</p></a>
-                </div>
-    
-                
-                    <div class = "nonactive box-nav no-margin">
-                        <a href="room.html"><p class="no-margin ">Rooms</p></a>
-                    </div>
-                
-                <div class = "nonactive box-nav no-margin">
-                    <a href="docter.html"><p class="no-margin ">Doctors</p></a>
-                </div>
-    
-                
-                    <div class = "nonactive box-nav no-margin">
-                        <a href="patient.html"><p class="no-margin "> Patients</p></a>
-                    </div>
-                
+            <div class="active box-nav no-margin">
+                <a href="index.html">
+                    <p class="no-margin ">Dashboard</p>
+                </a>
+            </div>
+
+
+            <div class="nonactive box-nav no-margin">
+                <a href="room.html">
+                    <p class="no-margin ">Rooms</p>
+                </a>
+            </div>
+
+            <div class="nonactive box-nav no-margin">
+                <a href="docter.html">
+                    <p class="no-margin ">Doctors</p>
+                </a>
+            </div>
+
+
+            <div class="nonactive box-nav no-margin">
+                <a href="patient.html">
+                    <p class="no-margin "> Patients</p>
+                </a>
+            </div>
+
         </div>
     </nav>
     <div class="flex-all">
+
         <aside class="flex-col noscroll">
             <h1 class="no-margin"><span class="Med">Med</span><span Class="Space">Space</span></h1>
             <hr class="no-margin">
             <div class="admin-profile flex-row">
-                <svg class="profile-pic" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
-                <circle cx="40" cy="40" r="31" fill="#D9D9D9"/>
-                <circle cx="40" cy="40" r="37.5" stroke="#0177FC" stroke-width="5"/>
+                <svg class="profile-pic" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"
+                    fill="none">
+                    <circle cx="40" cy="40" r="31" fill="#D9D9D9" />
+                    <circle cx="40" cy="40" r="37.5" stroke="#0177FC" stroke-width="5" />
                 </svg>
-    
+
                 <div class="namadiv">
                     <h2 class="nama">Hi, Admin!</h2>
                 </div>
             </div>
             <hr class="no-margin">
-    
+
             <div class="no-margin bounding-box">
-                <div class = "active box no-margin">
-                    <a href="index.html"><p class="no-margin ">Dashboard</p></a>
+                <div class="active box no-margin">
+                    <a href="index.html">
+                        <p class="no-margin ">Dashboard</p>
+                    </a>
                 </div>
-    
+
                 <div class="no-margin bounding-box">
-                    <div class = "nonactive box no-margin">
-                        <a href="room.html"><p class="no-margin ">Rooms</p></a>
+                    <div class="nonactive box no-margin">
+                        <a href="room.html">
+                            <p class="no-margin ">Rooms</p>
+                        </a>
                     </div>
                 </div>
             </div>
-    
+
             <hr class="no-margin">
-    
+
             <div class="no-margin bounding-box">
-                <div class = "nonactive box no-margin">
-                    <a href="docter.html"><p class="no-margin ">Doctors</p></a>
+                <div class="nonactive box no-margin">
+                    <a href="docter.html">
+                        <p class="no-margin ">Doctors</p>
+                    </a>
                 </div>
-    
+
                 <div class="no-margin bounding-box">
-                    <div class = "nonactive box no-margin">
-                        <a href="patient.html"><p class="no-margin ">Patients</p></a>
+                    <div class="nonactive box no-margin">
+                        <a href="patient.html">
+                            <p class="no-margin ">Patients</p>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -212,18 +330,32 @@
             <div class="info-frame">
                 <div class="info-isi">
                     <h2 class="no-margin info-title" onclick="">Room Capacity</h2>
-                    <div class="circle no-margin">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 110 110" fill="none">
-                            <circle cx="55" cy="55" r="55" fill="#D9D9D9"/>
-                            <path d="M110 55C110 65.878 106.774 76.5117 100.731 85.5564C94.6874 94.6011 86.0975 101.651 76.0476 105.813C65.9977 109.976 54.939 111.065 44.27 108.943C33.6011 106.821 23.801 101.583 16.1091 93.8909C8.41724 86.199 3.179 76.3989 1.05681 65.73C-1.06538 55.061 0.023806 44.0023 4.18663 33.9524C8.34945 23.9025 15.3989 15.3126 24.4436 9.26917C33.4883 3.22569 44.122 -1.29719e-07 55 0L55 55H110Z" fill="#04739B"/>
-                          </svg>
-                        </div>
+                    <!-- <div class="circle no-margin">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 110 110"
+                            fill="none">
+                            <circle cx="55" cy="55" r="55" fill="#D9D9D9" />
+                            <path
+                                d="M110 55C110 65.878 106.774 76.5117 100.731 85.5564C94.6874 94.6011 86.0975 101.651 76.0476 105.813C65.9977 109.976 54.939 111.065 44.27 108.943C33.6011 106.821 23.801 101.583 16.1091 93.8909C8.41724 86.199 3.179 76.3989 1.05681 65.73C-1.06538 55.061 0.023806 44.0023 4.18663 33.9524C8.34945 23.9025 15.3989 15.3126 24.4436 9.26917C33.4883 3.22569 44.122 -1.29719e-07 55 0L55 55H110Z"
+                                fill="#04739B" />
+                        </svg>
+                    </div> -->
+
+                    <canvas class="circle no-margin" id="myCanvas">
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 110 110"
+                            fill="none">
+                            <circle cx="55" cy="55" r="55" fill="#D9D9D9" />
+                            <path
+                                d="M110 55C110 65.878 106.774 76.5117 100.731 85.5564C94.6874 94.6011 86.0975 101.651 76.0476 105.813C65.9977 109.976 54.939 111.065 44.27 108.943C33.6011 106.821 23.801 101.583 16.1091 93.8909C8.41724 86.199 3.179 76.3989 1.05681 65.73C-1.06538 55.061 0.023806 44.0023 4.18663 33.9524C8.34945 23.9025 15.3989 15.3126 24.4436 9.26917C33.4883 3.22569 44.122 -1.29719e-07 55 0L55 55H110Z"
+                                fill="#04739B" />
+                        </svg> -->
+                    </canvas>
+
                     <h3 class="no-margin info-detail" id="percentage">75%</h3>
                 </div>
 
                 <div class="info-isi">
                     <h2 class="no-margin info-title">Patient Count</h2>
-                    <h4 class="patient-count no-margin">125</h4>
+                    <h4 class="patient-count no-margin" id="patient-count">125</h4>
                     <h3 class="no-margin info-detail" id="patient-label">patient</h3>
                 </div>
 
@@ -234,18 +366,18 @@
 
                     <div class="count">
                         <div class="text-count1">
-                            <h4 class="patient-count no-margin">30</h4>
+                            <h4 class="patient-count no-margin" id="room-count">30</h4>
                             <h3 class="no-margin info-detail" id="patient-label">rooms</h3>
                         </div>
 
                         <div class="text-container" id="room-details">
                             <div class="text-count2">
-                                <h4 class="room-count no-margin">14</h4>
+                                <h4 class="room-count no-margin" id="vip-count">14</h4>
                                 <h3 class="no-margin info-detail" id="room-label">VIP rooms</h3>
                             </div>
 
                             <div class="text-count2">
-                                <h4 class="room-count no-margin">16</h4>
+                                <h4 class="room-count no-margin" id="reg-count">16</h4>
                                 <h3 class="no-margin info-detail" id="room-label">Regular rooms</h3>
                             </div>
                         </div>
@@ -257,9 +389,9 @@
             <div class="tabel-pasien">
                 <div class="header-patient">
                     <h5 class="no-margin" id="patient-list">Patient List</h5>
-                    <a class="button-text">More -></a>
+                    <a class="button-text" href="patient.html">More -></a>
                 </div>
-                <table>
+                <table id="patient-list-table">
                     <tr>
                         <th class="header-table table-name">Name</th>
                         <th class="header-table table-room">Room</th>
@@ -268,10 +400,10 @@
                     </tr>
 
                     <tr>
-                        <td class="data-table table-name">Kenzie</th>
-                        <td class="data-table table-room">1011</td>
-                        <td class="data-table table-area">Hibiscus</td>
-                        <td class="data-table table-status">Checked In</td>
+                        <td class="table-name">Kenzie</th>
+                        <td class="table-room">1011</td>
+                        <td class="table-area">Hibiscus</td>
+                        <td class="table-status">Checked In</td>
                     </tr>
                     <tr>
                         <td class="data-table table-name">Kenzie</th>
@@ -328,10 +460,10 @@
                         <td class="data-table table-status">Checked In</td>
                     </tr>
                     <tr></tr>
-                        <td class="data-table table-name">Kenzie</th>
-                        <td class="data-table table-room">1011</td>
-                        <td class="data-table table-area">Hibiscus</td>
-                        <td class="data-table table-status">Checked In</td>
+                    <td class="data-table table-name">Kenzie</th>
+                    <td class="data-table table-room">1011</td>
+                    <td class="data-table table-area">Hibiscus</td>
+                    <td class="data-table table-status">Checked In</td>
                     </tr>
                     <tr>
                         <td class="data-table table-name">Kenzie</th>
@@ -350,14 +482,16 @@
                         <td class="data-table table-room">1011</td>
                         <td class="data-table table-area">Hibiscus</td>
                         <td class="data-table table-status">Checked In</td>
-                        </tr>
+                    </tr>
                 </table>
             </div>
         </div>
+        <div id="overlay"></div>
     </div>
-        
+
     <script src="js/index.js"></script>
-    
-    
+
+
 </body>
+
 </html>

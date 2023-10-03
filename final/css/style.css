@@ -246,7 +246,7 @@ a {
 
 .info-isi {
     display: flex;
-    padding: 26px 29px;
+    padding: 10px 29px;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -256,12 +256,12 @@ a {
 
 }
 
-.circle {
+/* .circle {
     display: flex;
     flex: 1 1 auto;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .info-title {
     color: #00000E;
@@ -421,8 +421,23 @@ table {
 }
 
 .table-status {
-    width: 10%
+    width: 50%
 }
+
+.form-table td {
+    background-color: white !important;
+    color:#04739B !important;
+}
+
+.data-table {
+    color:#04739B !important;
+    background-color: white
+}
+
+.value {
+    font-weight: 600;
+}
+
 
 /* th,
 td {
@@ -452,7 +467,7 @@ td {
     line-height: normal;
 }
 
-.room-number {
+#room-number {
     color: #FFF;
     font-family: Poppins;
     font-size: 20px;
@@ -461,7 +476,7 @@ td {
     line-height: normal;
 }
 
-.availabilty {
+#availabilty {
     color: #FFF;
     font-family: Poppins;
     font-size: 15px;
@@ -644,9 +659,16 @@ input[type="email"]:focus, input[type="password"] {
     border: .2em solid #7FBCD2;
 }
 
+input[type="radio"] {
+    width: fit-content;
+}
+
   
 #add-reserve {
     position: absolute;
+    animation-duration: 0.3s; /* Animation duration */
+  animation-fill-mode: forwards; 
+    z-index: 1;
     bottom: 2em; /* Adjust top position as needed */
     right: 2em; /* Adjust left position as needed */
     display: flex;
@@ -656,19 +678,95 @@ input[type="email"]:focus, input[type="password"] {
     justify-content: center;
     align-items: center;
     border-radius: calc(5em/2);
-    background: #0177FC;
-    color: white;
+    background: rgba(255, 255, 255, 0.686);
+    color: rgba(1, 119, 252);
+    border: none;
     box-shadow: none;
-    /* font-size: 1.2em; */
+    font-size: 1.2em;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
-    border: none;
   }
 
   #add-reserve:hover {
-    background-color: #5D7AB5;
+    background-color: rgba(255, 255, 255, 1);
   }
+
+#add-patient, #add-room, #add-doctor {
+    position: absolute;
+    z-index: 1;
+    /* bottom: 2em; */
+    right: 2em;
+    display: flex;
+    width: 10em;
+    height: 3em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: calc(5em/2);
+    background: rgba(255, 255, 255, 1);
+    color: rgba(1, 119, 252);
+    border: none;
+    box-shadow: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+@keyframes rotateForward {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(45deg);
+    }
+  }
+  
+  /* Keyframes for reverse rotating the button */
+  @keyframes rotateBackward {
+    0% {
+      transform: rotate(45deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+
+.hiddenbutton {
+    display: none;
+    z-index: 1;
+  }
+
+#add-patient:hover, #add-room:hover, #add-doctor:hover {
+    background-color: rgba(1, 119, 252);
+    color: white;
+}
+
+#add-patient {
+    bottom: 9em;
+}
+
+#add-doctor{
+    bottom: 13em;
+}
+
+#add-room {
+    bottom: 17em;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent gray overlay */
+    display: none; /* Initially hidden */
+    z-index: 0;
+    transition: background-color 0.3s ease-in-out;
+  }
+
 
 /* DOKTER LIST */
 .filter-row {
@@ -738,6 +836,101 @@ table td {
 .list-availability{
     width: 40%;
 }
+
+.list-name-patient {
+    width: 30%;
+    font-size: 1.2em;
+}
+.list-room {
+    width: 10%;
+    font-size: 1.2em;
+}
+.list-checkin{
+    width: 20%;
+    font-size: 1.2em;
+}
+.list-status{
+    width: 15%;
+    font-size: 1.2em;
+}
+.list-checkout{
+    width: 25%;
+    font-size: 1.2em;
+}
+
+.status-ci{
+    color: #04739B;
+    background-color: #fff;
+    padding: .2em 1em;
+    font-family: Poppins;
+    border-radius: 3em;
+    box-shadow: none !important;
+    border: none;
+    font-weight: 300;
+    font-size: 0.9em;
+    text-align: center;
+}
+  
+
+.status-d {
+    color: #fff;
+    background-color: #004057;
+    padding: .2em 1em;
+    font-family: Poppins;
+    border-radius: 3em;
+    box-shadow: none !important;
+    border: none;
+    font-weight: 300;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.check-out, .view-info{
+    color: #ffffff;
+    background-color: #b00707;
+    padding: .2em 1em;
+    font-family: Poppins;
+    border-radius: 3em;
+    box-shadow: none !important;
+    border: none;
+    font-weight: 300;
+    font-size: 0.9em;
+    text-align: center;
+    transition: background-color 0.3s;
+    transition: color 0.3s;
+}
+
+.view-info{
+    color: #3a5e0d;
+    background-color: #7ee204;
+}
+
+.check-out:hover {
+    background-color: #4e0707;
+}
+
+.view-info:hover {
+    color: #fff;
+    background-color: #264401;  
+}
+
+canvas {
+    width:auto; 
+    height:110px;
+}
+
+
+
+.table-container {
+    height: 35em; /* Adjust the height as needed */
+    overflow-y: auto;
+    width: 100%;
+  }
+
+
+/* #patient-info {
+    display: block !important;
+} */
 
 /* @media (min-width: 799px) {
     .text-container {
