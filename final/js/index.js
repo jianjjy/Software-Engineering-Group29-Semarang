@@ -227,25 +227,29 @@ async function displayPatientInfo(query) {
   }
 }
 
-
-function openPatientDialog (patient) {
+function openPatientDialog(patient) {
   const dialog = document.getElementById('patient-info');
-  dialog.showModal()
+  // Close the dialog
+  dialog.close();
   dialog.innerHTML = '<p>Loading patient and room information...</p>';
+  // Fetch patient information
   fetchPatientInRoom(`patient_id=${patient.patient_id}`).then(data => {
-      dialog.innerHTML = `<p>Patient ID: ${data.response.patient.patient_id}</p>
-                          <p>Name: ${data.response.patient.name}</p>
-                          <p>Room: ${data.response.patient.room_id}</p>
-                          <p>Additional data: ${data.response.patient.room.room_type}</p>`;
-    })
-    .catch(error => {
-      dialog.innerHTML = `${error} <p>Error fetching data.</p>`;
+    dialog.innerHTML = `<p>Patient ID: ${data.response.patient.patient_id}</p>
+                        <p>Name: ${data.response.patient.name}</p>
+                        <p>Room: ${data.response.patient.room_id}</p>
+                        <p>Additional data: ${data.response.patient.room.room_type}</p>
+                        <button id="cancel-button">Cancel</button>`;
+    // Add event listener to the cancel button
+    const cancelButton = dialog.querySelector('#cancel-button');
+    cancelButton.addEventListener('click', () => {
+      dialog.close();
     });
+  }).catch(error => {
+    dialog.innerHTML = `${error} <p>Error fetching data.</p>`;
+  });
+  // Show the dialog
+  dialog.showModal();
 }
-
-
-
-
 
 async function displayRoomNumber(query) {
   const roomInfoDiv = document.getElementById('room');
