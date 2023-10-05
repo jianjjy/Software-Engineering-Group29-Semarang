@@ -114,7 +114,7 @@ async function getRoomCount() {
 
     regDiv.innerHTML = data.count_reg
     vipDiv.innerHTML = data.count_vip
-    roomDiv.innerHTML = data.count_reg + data.count_reg
+    roomDiv.innerHTML = data.room_count
   } catch (error) {
     console.error('Error fetching room information:', error);
     throw error;
@@ -189,13 +189,14 @@ async function displayPatientInfo(query) {
         buttonHTML = `<button class="check-out">Check-Out</button>`;
       } else if (patient.status === "Discharged") {
         status_class = "status-d"
+        buttonHTML = ``
       }
       let formatDate = new Date(patient.checkin_date).toLocaleDateString('en-us', {
         year: "numeric",
         month: "short",
         day: "numeric"
       });
-      
+
       patientsHTML += `
         <tr>
         <td class="list-name-patient">${patient.name}</td>
@@ -222,10 +223,40 @@ async function displayPatientInfo(query) {
         openPatientDialog(patient);
       });
     });
+
+    const checkOutButtons = document.querySelectorAll('.check-out');
+    checkOutButtons.forEach((button, index) => {
+      button.addEventListener('click', () => {
+        const patient = patientData.patients[index].patient_id;
+        checkOut(patient);
+      })
+    })
   } catch (error) {
     patientTable.innerHTML = `${error.message}<p>Error fetching patient information. Please try again later.</p>`;
   }
 }
+
+async function checkOut(id) {
+  try {
+    const confirmation = confirm('Are you sure you want to check out this patient?');
+    if (!confirmation) {
+      return; // If the user cancels, do not proceed with the checkout
+    }
+    const response = await fetch(`http://localhost:3000/patient/?patient_id=${id}`,{
+      method: 'PUT'
+    });
+
+    if (response.ok) {
+      displayPatientInfo('?status=Checked In')
+      getRoomCount()
+    }
+  } catch (error) {
+    console.error(error.message);
+    throw error;
+  }
+}
+
+
 
 function openPatientDialog(patient) {
   const dialog = document.getElementById('patient-info');
@@ -243,6 +274,16 @@ function openPatientDialog(patient) {
     const cancelButton = dialog.querySelector('#cancel-button');
     cancelButton.addEventListener('click', () => {
       dialog.close();
+      // dialog.innerHTML = `<p>Patient ID: ${data.response.patient.patient_id}</p>
+      //                     <p>Name: ${data.response.patient.name}</p>
+      //                     <p>Room: ${data.response.patient.room_id}</p>
+      //                     <p>Additional data: ${data.response.patient.room.room_type}</p>
+      //                     <div class="flex-row button-row">
+      //           <button id="nosave" onclick="closeDialog('patient-info')">Don't Save</button>
+      //       </div>`;
+    })
+    .catch(error => {
+      dialog.innerHTML = `${error} <p>Error fetching data.</p>`;
     });
   }).catch(error => {
     dialog.innerHTML = `${error} <p>Error fetching data.</p>`;

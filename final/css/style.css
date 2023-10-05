@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-
+.body {
+    width: 100%;
+}
 nav {
     visibility: hidden;
     width: 100%;
@@ -13,6 +15,22 @@ nav {
     position: fixed;
     top: 0;
     margin-bottom: 2rem;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #7FBCD2;
 }
 
 .list-a {
@@ -995,4 +1013,45 @@ canvas {
     }
 }
 
-@media (min-width: 576px) {}
+@media (max-width: 576px) {
+    .hamburger {
+        display: block;
+        height: fit-content;   
+    }
+
+    .hamburger.active2 .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active2 .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg) ;
+    }
+
+    .hamburger.active2 .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg) ;
+    }
+
+    .list-a {
+        position: fixed;
+        left: -100%;
+        top: 90px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #7FBCD2;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .box-nav {
+
+        border: white solid 1px;
+        padding: 16px 0;
+        border-radius: 0px;
+    }
+
+    .list-a.active {
+        left: 0;
+    }
+    
+}
