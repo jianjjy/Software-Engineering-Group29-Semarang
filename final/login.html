@@ -13,31 +13,14 @@
 		<div class="no-margin">
 			<span class="Med">Med</span><span Class="Space">Space</span>
 		</div>
-		<form action="#">
-			<input class="field login-field" type="email" placeholder="Enter email address" id="email" required>
-			<input class="field login-field" type="password" placeholder="Enter password" id="password" required>
-			<input class="field login-button" type="submit" value="Login" class="submit-btn" onclick="auth()">
-	</div>
-	</form>
+		<form id="login-form">
+            <input class="field login-field" type="text" placeholder="Enter Email" id="email" name="email" required>
+            <input class="field login-field" type="password" placeholder="Enter password" id="password" name="password" required>
+            <input class="field login-button" type="submit" value="Login" class="submit">
+        </form>
 	</div>
 
-	<script>
-		function auth() {
-			var email = document.getElementById("email").value;
-			var password = document.getElementById("password").value;
-			if (email == "admin@gmail.com" && password == "admin123") {
-				window.location.assign("index.html");
-				alert("Login Successfully");
-			} else if (email == "") {
-				alert("Fill Email")
-			} else if (email != "admin@gmail.com") {
-				alert ("Email is not found, try another email")
-			} else {
-				alert("Invalid Information");
-				return;
-			}
-		}
-	</script>
+	<script src="./js/login.js"></script>
 </body>
 
 </html>
