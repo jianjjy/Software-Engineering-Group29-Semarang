@@ -6,7 +6,7 @@ const button = document.getElementById('add-reserve');
 const overlay = document.getElementById('overlay');
 
 function closeDialog(dialogId) {
-  alert('Do you want to close this tab?');
+    alert('Do you want to close this tab?');
   document.getElementById(dialogId).close();
 }
 
@@ -89,6 +89,10 @@ patientForm.addEventListener('submit', (event) => {
     .then((response) => {
       if (response.ok) {
         alert("Check in completed!");
+        patientForm.close();
+        showButtons();
+        displayPatientInfo('?status=Checked In')
+        
       } else {
         alert("Check in Failed");
       }
@@ -210,6 +214,11 @@ async function displayPatientInfo(query) {
 
   try {
     const patientData = await fetchPatientInfo(query);
+    patientData.patients.sort((a, b) => {
+      const dateA = new Date(a.checkin_date);
+      const dateB = new Date(b.checkin_date);
+      return dateB - dateA; // Sort in descending order
+    });
 
     let patientsHTML = `<tr>
       <th class="list-name-patient">Name</th>
@@ -218,6 +227,7 @@ async function displayPatientInfo(query) {
       <th class="list-status">Status</th>
       <th class="list-checkout">Info</th>
       </tr>`;
+
 
     patientData.patients.forEach(patient => {
       let status_class = "";

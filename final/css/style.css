@@ -514,7 +514,7 @@ td {
     flex-shrink: 0;
 }
 
-.avail {
+.avail, .AddPatientinRoom {
     background: #04739B;
 }
 

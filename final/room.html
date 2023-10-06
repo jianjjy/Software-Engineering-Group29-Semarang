@@ -116,6 +116,115 @@
                 <button class="filter-button" onclick="filter_floor(6)">6th Floor</button>
             </div>
 
+            <dialog id="AddPatientinRoom">
+                <h1 class="no-margin Hos-Name">Reservation Form</h1>
+                <form action="" id="DataPasien">
+                    <table class="form-table">
+                        <tr>
+                            <td class="data-table">Name:</td>
+                            <td class="data-table table-name"><input type="text" name="name-patient" class="field"
+                                    placeholder="Name"></td>
+                        </tr>
+        
+                        <tr>
+                            <td class="data-table">Gender:</td>
+                            <td class="data-table table-name">
+                                <div class="flex-row">
+                                    <div class="flex-row">
+                                        <label>
+                                            <input type="radio" name="gender-patient" value="Male">
+                                            Male
+                                        </label>
+                                    </div>
+                                    <div class="flex-row">
+                                        <label>
+                                            <input type="radio" name="gender-patient" value="Female">
+                                            Female
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+        
+                        <tr>
+                            <td class="data-table table-name">Address:</td>
+                            <td class="data-table table-name"><textarea class="field" name="address-patient"></textarea></td>
+                        </tr>
+        
+                        <tr>
+                            <td class="data-table table-name">Date of Birth:</td>
+                            <td class="data-table table-name"><input type="date" name="birthdate-patient" class="field"
+                                    placeholder="Birthdate"></td>
+                        </tr>
+        
+                        <tr>
+                            <td class="data-table table-name">Place of Birth:</td>
+                            <td class="data-table table-name"><input type="text" name="birthplace-patient" class="field"
+                                    placeholder="Place of Birth"></td>
+                        </tr>
+        
+                        <tr>
+                            <td class="data-table table-name">Phone Number</td>
+                            <td class="data-table table-name"><input type="text" name="phone-patient" class="field"
+                                    placeholder="Phone Number"></td>
+                        </tr>
+        
+                        <tr>
+                            <td class="data-table table-name">Email</td>
+                            <td class="data-table table-name"><input type="email" name="email-patient" class="field"
+                                    placeholder="Email"></td>
+                        </tr>
+        
+                        <tr>
+                            <td class="data-table table-name">Blood Type</td>
+                            <td class="data-table table-name">
+                                <input list="blood-type" name="bloodtype-patient" type="text" placeholder="Blood Type" class="field">
+                                <datalist id="blood-type">
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                </datalist>
+                            </td>
+                        </tr>
+        
+                        <tr>
+                            <td class="data-table table-name">Room</td>
+                            <td class="data-table table-name" id="isi-room">
+                                <input list="room-datalist" name="room-patient" type="text" placeholder="Room" class="field">
+                                <datalist id="room-datalist">
+                                </datalist>
+                            </td>
+                        </tr>
+        
+                        <tr>
+                            <td class="data-table table-name">Doctor</td>
+                            <td class="data-table table-name">
+                                <input list="doctor-datalist" name="doctor-patient" type="text" placeholder="Doctor" class="field">
+                                <datalist id="doctor-datalist">
+                                </datalist>
+                            </td>
+                        </tr>
+        
+                        <tr>
+                            <td class="data-table table-name">Check in Date:</td>
+                            <td class="data-table table-name"><input type="date" name="checkindate" class="field"
+                                    placeholder="Check in Date"></td>
+                        </tr>
+                    </table>
+        
+                    <div class="flex-row button-row">
+                        <button id="nosave" onclick="closeDialog('reserve')">Don't Save</button>
+                        <button id="submit-button" type="submit">Save</button>
+                    </div>
+                </form>
+            </dialog>
+        
+
             <dialog id="no-avail">
                 <h1 class="no-margin Hos-Name">Nomor Ruangan</h1>
                 <table>
@@ -137,9 +246,9 @@
                 <button id="nosave" onclick="closeDialog('no-avail')">Close</button>
             </dialog>
 
-            <dialog id="avail">
+            <dialog id="">
                 <h1 class="no-margin Hos-Name">Nomor Ruangan</h1>
-                <form action="" id="data">
+                <form action="" id="dataPatientinRoom">
                     <table>
                         <tr>
                             <td class="data-table table-name">Name:</td>
