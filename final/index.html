@@ -41,13 +41,13 @@
                         <div class="flex-row">
                             <div class="flex-row">
                                 <label>
-                                    <input type="radio" name="gender" value="Male">
+                                    <input type="radio" name="gender-patient" value="Male">
                                     Male
                                 </label>
                             </div>
                             <div class="flex-row">
                                 <label>
-                                    <input type="radio" name="gender" value="Female">
+                                    <input type="radio" name="gender-patient" value="Female">
                                     Female
                                 </label>
                             </div>
@@ -57,37 +57,37 @@
 
                 <tr>
                     <td class="data-table table-name">Address:</td>
-                    <td class="data-table table-name"><textarea class="field" name="address"></textarea></td>
+                    <td class="data-table table-name"><textarea class="field" name="address-patient"></textarea></td>
                 </tr>
 
                 <tr>
                     <td class="data-table table-name">Date of Birth:</td>
-                    <td class="data-table table-name"><input type="date" name="birthdate" class="field"
+                    <td class="data-table table-name"><input type="date" name="birthdate-patient" class="field"
                             placeholder="Birthdate"></td>
                 </tr>
 
                 <tr>
                     <td class="data-table table-name">Place of Birth:</td>
-                    <td class="data-table table-name"><input type="text" name="birthplace" class="field"
+                    <td class="data-table table-name"><input type="text" name="birthplace-patient" class="field"
                             placeholder="Place of Birth"></td>
                 </tr>
 
                 <tr>
                     <td class="data-table table-name">Phone Number</td>
-                    <td class="data-table table-name"><input type="text" name="phone" class="field"
+                    <td class="data-table table-name"><input type="text" name="phone-patient" class="field"
                             placeholder="Phone Number"></td>
                 </tr>
 
                 <tr>
                     <td class="data-table table-name">Email</td>
-                    <td class="data-table table-name"><input type="email" name="email" class="field"
+                    <td class="data-table table-name"><input type="email" name="email-patient" class="field"
                             placeholder="Email"></td>
                 </tr>
 
                 <tr>
                     <td class="data-table table-name">Blood Type</td>
                     <td class="data-table table-name">
-                        <input list="blood-type" name="bloodtype" type="text" placeholder="Blood Type" class="field">
+                        <input list="blood-type" name="bloodtype-patient" type="text" placeholder="Blood Type" class="field">
                         <datalist id="blood-type">
                             <option value="A+">A+</option>
                             <option value="A-">A-</option>
@@ -104,8 +104,17 @@
                 <tr>
                     <td class="data-table table-name">Room</td>
                     <td class="data-table table-name">
-                        <input list="room" name="room" type="text" placeholder="Room" class="field">
-                        <datalist id="room">
+                        <input list="room-datalist" name="room-patient" type="text" placeholder="Room" class="field">
+                        <datalist id="room-datalist">
+                        </datalist>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="data-table table-name">Doctor</td>
+                    <td class="data-table table-name">
+                        <input list="doctor-datalist" name="doctor-patient" type="text" placeholder="Doctor" class="field">
+                        <datalist id="doctor-datalist">
                         </datalist>
                     </td>
                 </tr>

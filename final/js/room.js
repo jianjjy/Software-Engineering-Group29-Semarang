@@ -32,6 +32,8 @@ async function fetchRoomInfo(query) {
   }
 }
 
+
+
 async function displayRoomInfo(query) {
   const roomInfoDiv = document.getElementById('roomInfo');
   roomInfoDiv.innerHTML = 'Loading room information...';
@@ -54,6 +56,7 @@ async function displayRoomInfo(query) {
       roomsHTML += `
       <div class="room-frame ${occupied_class} no-margin" onclick="openDialog(this)">
             <h1 id="room-number" class="no-margin">R. ${room.room_id}</h1>
+            <h1 id="room-number" style="font-size: smaller; font-weight: 200" class="no-margin">${room.room_type}</h1>
             <h1 id="availabilty" class="no-margin">${occupied_message}</h1>
             </div>
         `;
